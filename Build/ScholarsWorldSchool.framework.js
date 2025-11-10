@@ -1334,10 +1334,10 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  3870432: () => { Module['emscripten_get_now_backup'] = performance.now; },  
- 3870487: ($0) => { performance.now = function() { return $0; }; },  
- 3870535: ($0) => { performance.now = function() { return $0; }; },  
- 3870583: () => { performance.now = Module['emscripten_get_now_backup']; }
+  3162548: () => { Module['emscripten_get_now_backup'] = performance.now; },  
+ 3162603: ($0) => { performance.now = function() { return $0; }; },  
+ 3162651: ($0) => { performance.now = function() { return $0; }; },  
+ 3162699: () => { performance.now = Module['emscripten_get_now_backup']; }
 };
 
 
@@ -7606,14 +7606,6 @@ var ASM_CONSTS = {
   		HEAPF64[outHeight] = Module.SystemInfo.height;
   	}
 
-  
-  function _JS_SystemInfo_GetStreamingAssetsURL(buffer, bufferSize)
-  	{
-  		if (buffer)
-  			stringToUTF8(Module.streamingAssetsUrl, buffer, bufferSize);
-  		return lengthBytesUTF8(Module.streamingAssetsUrl);
-  	}
-
   function _JS_SystemInfo_HasAstcHdr()
       {
         var ext = GLctx.getExtension('WEBGL_compressed_texture_astc');
@@ -7641,11 +7633,6 @@ var ASM_CONSTS = {
   function _JS_SystemInfo_HasWebGPU()
   	{
   		return Module.SystemInfo.hasWebGPU;
-  	}
-
-  function _JS_SystemInfo_IsMobile()
-  	{
-  		return Module.SystemInfo.mobile;
   	}
 
   function _JS_UnityEngineShouldQuit() {
@@ -16375,13 +16362,11 @@ var wasmImports = {
   "JS_SystemInfo_GetOS": _JS_SystemInfo_GetOS,
   "JS_SystemInfo_GetPreferredDevicePixelRatio": _JS_SystemInfo_GetPreferredDevicePixelRatio,
   "JS_SystemInfo_GetScreenSize": _JS_SystemInfo_GetScreenSize,
-  "JS_SystemInfo_GetStreamingAssetsURL": _JS_SystemInfo_GetStreamingAssetsURL,
   "JS_SystemInfo_HasAstcHdr": _JS_SystemInfo_HasAstcHdr,
   "JS_SystemInfo_HasCursorLock": _JS_SystemInfo_HasCursorLock,
   "JS_SystemInfo_HasFullscreen": _JS_SystemInfo_HasFullscreen,
   "JS_SystemInfo_HasWebGL": _JS_SystemInfo_HasWebGL,
   "JS_SystemInfo_HasWebGPU": _JS_SystemInfo_HasWebGPU,
-  "JS_SystemInfo_IsMobile": _JS_SystemInfo_IsMobile,
   "JS_UnityEngineShouldQuit": _JS_UnityEngineShouldQuit,
   "JS_WebCamVideo_GetNativeHeight": _JS_WebCamVideo_GetNativeHeight,
   "JS_WebCamVideo_GetNativeWidth": _JS_WebCamVideo_GetNativeWidth,
